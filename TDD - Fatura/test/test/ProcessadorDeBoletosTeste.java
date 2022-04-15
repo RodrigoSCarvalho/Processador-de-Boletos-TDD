@@ -1,11 +1,14 @@
 package test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
 import src.Boleto;
 import src.Fatura;
+import src.Pagamento;
 import src.ProcessadorDeBoletos;
 
 public class ProcessadorDeBoletosTeste {
@@ -13,6 +16,9 @@ public class ProcessadorDeBoletosTeste {
 	Boleto boleto1;
 	Boleto boleto2;
 	Boleto boleto3;
+	Pagamento pagamentoBoleto1;
+	Pagamento pagamentoBoleto2;
+	Pagamento pagamentoBoleto3;
 	Fatura fatura;
 	ProcessadorDeBoletos proc;
 	
@@ -25,6 +31,11 @@ public class ProcessadorDeBoletosTeste {
 		this.fatura = new Fatura("24-03-2022", "Eduardo Gudin", 1500.00);
 		
 		this.proc.addBoleto(this.boleto1);
+	}
+	
+	@testAddPagamento(){
+		proc.addPagamento(pagamentoBoleto2);
+		assertEquals("2", proc.getQtdePagamentos());
 	}
 	
 	@Test
