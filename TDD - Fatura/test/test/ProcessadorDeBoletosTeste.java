@@ -7,24 +7,32 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
 import src.Boleto;
+import src.ProcessadorDeBoletos;
 
 public class ProcessadorDeBoletosTeste {
 
-	ArrayList boletos;
 	Boleto boleto1;
 	Boleto boleto2;
 	Boleto boleto3;
+	ProcessadorDeBoletos proc;
 	
 	
 	@Before
 	public void inicializa() {
-		this.boletos = new ArrayList();
+		this.proc = new ProcessadorDeBoletos();
+		
 	}
 	
 	@Test
-	public void addBoleto() {
+	public void testAddBoleto() {
 		this.boleto1 = new Boleto(0001, "21-03-2022", 500.00);
-		Assertions.assertEquals(1, ProcessadorDeBoletos.getQtdeBoletos());
+		proc.addBoleto(boleto1);
+		Assertions.assertEquals(1, proc.getQtdeBoletos());
 	}
 	
+	
+	@Test
+	public void testQuantidadeBoletos() {
+		Assertions.assertEquals(1, proc.getQtdeBoletos());
+	}
 }
