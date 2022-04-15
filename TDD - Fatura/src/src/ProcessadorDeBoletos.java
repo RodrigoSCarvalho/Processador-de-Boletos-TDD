@@ -21,7 +21,7 @@ public class ProcessadorDeBoletos {
 	
 
 	public String getFatura() {
-		return "Eduardo Gudin";
+		return fatura.getNomeCliente();
 	}
 
 	public void setFatura(Fatura fatura) {
@@ -44,7 +44,7 @@ public class ProcessadorDeBoletos {
 	public double getValorTotalPagamento() {
 		
 		double valorTotal = 0.0;
-		for (Iterator i = boletos.iterator(); i.hasNext();) {
+		for (Iterator<Boleto> i = boletos.iterator(); i.hasNext();) {
 			Boleto boletos = (Boleto) i.next();
 			valorTotal += boletos.getPagamento().getValorPago();
 		}

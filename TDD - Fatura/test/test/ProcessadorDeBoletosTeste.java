@@ -1,7 +1,5 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
@@ -55,7 +53,10 @@ public class ProcessadorDeBoletosTeste {
 	@Test
 	public void testValorPagoBoletos() {
 		Assertions.assertEquals(900, proc.getValorTotalPagamento());
-
-		
+	}
+	
+	@Test
+	public void testFaturaPaga() {
+		Assertions.assertEquals("PAGA", proc.verificaFaturaPaga());
 	}
 }
