@@ -1,7 +1,6 @@
 package src;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Fatura {
 	 
@@ -11,8 +10,10 @@ public class Fatura {
     private ArrayList boletos;
     
     
-    public Fatura() {
-    	boletos = new ArrayList();
+    public Fatura(String data, String nome, double valor) {
+    	this.data = data;
+    	this.nomeCliente = nome;
+    	this.valorFatura = valor;
     }    
     public double getValorFatura(){
         return valorFatura;
