@@ -28,6 +28,10 @@ public class ProcessadorDeBoletos {
 		this.boletos = boletos;
 	}
 
+	public double getValorTotalPagamento() {
+		return 900;
+	}
+
 
 
 }

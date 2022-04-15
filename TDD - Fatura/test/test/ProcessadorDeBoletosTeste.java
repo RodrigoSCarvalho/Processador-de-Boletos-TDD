@@ -47,7 +47,7 @@ public class ProcessadorDeBoletosTeste {
 	
 	@Test
 	public void testValorPagoBoletos() {
-		Assertions.assertEquals("900", proc.getValorTotalPagamento());
+		Assertions.assertEquals(900, proc.getValorTotalPagamento());
 
 		
 	}
