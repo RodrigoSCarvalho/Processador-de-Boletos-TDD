@@ -52,8 +52,17 @@ public class ProcessadorDeBoletos {
 	}
 
 	public String verificaFaturaPaga() {
-		// TODO Auto-generated method stub
-		return "PAGA";
+		String statusFatura;
+		
+		double valorTotalPago = getValorTotalPagamento();
+		
+		if (valorTotalPago >= fatura.getValorFatura()){
+			statusFatura = "PAGA";
+		}else {
+			statusFatura = "NÃO PAGA";
+		}
+		
+		return statusFatura;
 	}
 
 
