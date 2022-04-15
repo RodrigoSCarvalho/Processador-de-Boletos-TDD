@@ -1,14 +1,19 @@
 package src;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Fatura {
 	 
     private String data;
     private String nomeCliente;
     private double valorFatura;
-    ArrayList<Boleto> boletos;
+    private ArrayList boletos;
     
+    
+    public Fatura() {
+    	boletos = new ArrayList();
+    }    
     public double getValorFatura(){
         return valorFatura;
     }
@@ -33,12 +38,19 @@ public class Fatura {
         this.nomeCliente = nomeCliente;
     }
 
-	public ArrayList<Boleto> getBoletos() {
+	public void addBoleto (Boleto boleto) {
+		boletos.add(boleto);
+	}
+    
+	public ArrayList getBoletos() {
 		return boletos;
 	}
 
-	public void setBoletos(ArrayList<Boleto> boletos) {
+	public void setBoletos(ArrayList boletos) {
 		this.boletos = boletos;
 	}
-    
+
+	public String getFaturaPaga() {
+		return "PAGA";
+	}
 }

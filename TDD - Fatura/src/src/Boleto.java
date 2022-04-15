@@ -1,7 +1,5 @@
 package src;
 
-import java.util.ArrayList;
-
 public class Boleto {
 	
     private int codigo;
