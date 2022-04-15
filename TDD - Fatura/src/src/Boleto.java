@@ -31,5 +31,6 @@ public class Boleto {
 		this.valorPago = valorPago;
 	}
     
+	
 
 }

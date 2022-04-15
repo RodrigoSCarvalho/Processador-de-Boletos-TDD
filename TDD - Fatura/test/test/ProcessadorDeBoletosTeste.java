@@ -20,13 +20,12 @@ public class ProcessadorDeBoletosTeste {
 	@Before
 	public void inicializa() {
 		this.proc = new ProcessadorDeBoletos();
-		
+		this.boleto1 = new Boleto(0001, "21-03-2022", 500.00);
+		this.proc.addBoleto(this.boleto1);
 	}
 	
 	@Test
 	public void testAddBoleto() {
-		this.boleto1 = new Boleto(0001, "21-03-2022", 500.00);
-		proc.addBoleto(boleto1);
 		Assertions.assertEquals(1, proc.getQtdeBoletos());
 	}
 	
