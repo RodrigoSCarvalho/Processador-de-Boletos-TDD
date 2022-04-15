@@ -29,11 +29,12 @@ public class ProcessadorDeBoletosTeste {
 		this.boleto1 = new Boleto(0001, "21-03-2022", 500.00);
 		this.boleto2 = new Boleto(0002, "21-03-2022", 400.00) ;
 		this.fatura = new Fatura("24-03-2022", "Eduardo Gudin", 1500.00);
-		
+		this.pagamentoBoleto1 = new Pagamento("21-03-2022", 500.00, "BOLETO");
 		this.proc.addBoleto(this.boleto1);
 	}
 	
-	@testAddPagamento(){
+	@Test
+	public void testAddPagamento(){
 		proc.addPagamento(pagamentoBoleto2);
 		assertEquals("2", proc.getQtdePagamentos());
 	}
