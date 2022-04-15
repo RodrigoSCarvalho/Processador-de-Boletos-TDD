@@ -38,4 +38,9 @@ public class ProcessadorDeBoletosTeste {
 	public void testQuantidadeBoletos() {
 		Assertions.assertEquals(1, proc.getQtdeBoletos());
 	}
+	
+	@Test
+	public void testPagamentoFatura() {
+		
+	}
 }
