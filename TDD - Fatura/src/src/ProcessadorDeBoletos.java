@@ -28,7 +28,7 @@ public class ProcessadorDeBoletos {
 		this.fatura = fatura;
 	}
 
-	public int getQtdeBoletos() {
+	public int getQtdePagamentos() {
 		return boletos.size();
 	}
 
