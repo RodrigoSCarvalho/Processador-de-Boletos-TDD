@@ -51,6 +51,11 @@ public class ProcessadorDeBoletos {
 		return valorTotal;
 	}
 
+	public String verificaFaturaPaga() {
+		// TODO Auto-generated method stub
+		return "PAGA";
+	}
+
 
 
 }
