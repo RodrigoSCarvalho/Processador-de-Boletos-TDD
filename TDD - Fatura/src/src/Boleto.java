@@ -6,6 +6,12 @@ public class Boleto {
     private String data;
     private double valorPago;
     
+    public Boleto(int codigo, String data, double valor) {
+    	this.codigo = codigo;
+    	this.data = data;
+    	this.valorPago = valor;
+    }
+    
 	public int getCodigo() {
 		return codigo;
 	}

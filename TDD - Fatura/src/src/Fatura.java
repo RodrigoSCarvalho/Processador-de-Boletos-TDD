@@ -50,7 +50,4 @@ public class Fatura {
 		this.boletos = boletos;
 	}
 
-	public String getFaturaPaga() {
-		return "PAGA";
-	}
 }
