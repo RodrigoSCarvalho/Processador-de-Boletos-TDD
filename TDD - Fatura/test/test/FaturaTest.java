@@ -21,11 +21,14 @@ public class FaturaTest {
 	@Before
 	public void inicializa() {
 		this.fatura = new Fatura();
+		this.boleto1 = new Boleto();
+		this.boleto2 = new Boleto();
+		this.boleto3 = new Boleto();
 	}
 	
 	@Test
-	public void Fatura() {
-		assertEquals("PAGA", this.fatura.getFaturaPaga());
+	public void testFaturaPaga() {
+		assertEquals("PAGA", processadorDeBoletos());
 	}
 	
 
