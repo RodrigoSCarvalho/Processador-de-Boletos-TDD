@@ -30,19 +30,20 @@ public class ProcessadorDeBoletosTeste {
 		this.boleto2 = new Boleto(0002, "21-03-2022", 400.00) ;
 		this.fatura = new Fatura("24-03-2022", "Eduardo Gudin", 1500.00);
 		this.proc.addBoleto(this.boleto1);
+		this.proc.addBoleto(this.boleto2);
 	}
 	
 	
 	@Test
 	public void testAddBoleto() {
 		proc.addBoleto(boleto2);
-		Assertions.assertEquals(2, proc.getQtdeBoletos());
+		Assertions.assertEquals(3, proc.getQtdeBoletos());
 	}
 	
 	
 	@Test
 	public void testQuantidadeBoletos() {
-		Assertions.assertEquals(1, proc.getQtdeBoletos());
+		Assertions.assertEquals(2, proc.getQtdeBoletos());
 	}
 	
 	@Test

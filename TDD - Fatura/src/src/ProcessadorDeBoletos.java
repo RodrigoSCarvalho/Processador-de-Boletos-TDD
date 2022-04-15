@@ -1,6 +1,7 @@
 package src;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ProcessadorDeBoletos {
 	
@@ -29,7 +30,13 @@ public class ProcessadorDeBoletos {
 	}
 
 	public double getValorTotalPagamento() {
-		return 900;
+		
+		double valorTotal = 0.0;
+		for (Iterator i = boletos.iterator(); i.hasNext();) {
+			Boleto boletos = (Boleto) i.next();
+			valorTotal += boletos.getPagamento().getValorPago();
+		}
+		return valorTotal;
 	}
 
 
