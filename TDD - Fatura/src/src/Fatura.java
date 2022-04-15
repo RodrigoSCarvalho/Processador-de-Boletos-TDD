@@ -7,13 +7,14 @@ public class Fatura {
     private String data;
     private String nomeCliente;
     private double valorFatura;
-    private ArrayList boletos;
+    private ArrayList<Boleto> boletos;
     
     
     public Fatura(String data, String nome, double valor) {
     	this.data = data;
     	this.nomeCliente = nome;
     	this.valorFatura = valor;
+    	boletos = new ArrayList<Boleto>();
     }    
     public double getValorFatura(){
         return valorFatura;
@@ -43,11 +44,11 @@ public class Fatura {
 		boletos.add(boleto);
 	}
     
-	public ArrayList getBoletos() {
+	public ArrayList<Boleto> getBoletos() {
 		return boletos;
 	}
 
-	public void setBoletos(ArrayList boletos) {
+	public void setBoletos(ArrayList<Boleto> boletos) {
 		this.boletos = boletos;
 	}
 
