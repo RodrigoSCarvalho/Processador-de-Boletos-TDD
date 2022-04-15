@@ -32,11 +32,6 @@ public class ProcessadorDeBoletosTeste {
 	
 	
 	@Test
-	public void testGetFatura() {
-		Assertions.assertEquals("Eduardo Gudin", proc.getFatura());
-	}
-	
-	@Test
 	public void testQuantidadeBoletos() {
 		Assertions.assertEquals(3, proc.getQtdeBoletos());
 	}
