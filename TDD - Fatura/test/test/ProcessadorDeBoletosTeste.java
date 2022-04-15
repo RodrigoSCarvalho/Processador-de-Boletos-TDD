@@ -20,9 +20,9 @@ public class ProcessadorDeBoletosTeste {
 	@Before
 	public void inicializa() {
 		this.proc = new ProcessadorDeBoletos();
-		this.boleto1 = new Boleto(0001, "21-03-2022", 500.00);
-		this.boleto2 = new Boleto(0002, "21-03-2022", 400.00);
-		this.boleto3 = new Boleto(0003, "22-03-2022", 600.00);
+		this.boleto1 = new Boleto(0001, "21-03-2022", 1000.00);
+		this.boleto2 = new Boleto(0002, "21-03-2022", 500.00);
+		this.boleto3 = new Boleto(0003, "22-03-2022", 250.00);
 		this.fatura = new Fatura("24-03-2022", "Eduardo Gudin", 1500.00);
 		this.proc.setFatura(this.fatura);
 		this.proc.addBoleto(this.boleto1);
@@ -38,7 +38,7 @@ public class ProcessadorDeBoletosTeste {
 	
 	@Test
 	public void testValorPagoBoletos() {
-		Assertions.assertEquals(1500, proc.getValorTotalPagamento());
+		Assertions.assertEquals(1750, proc.getValorTotalPagamento());
 	}
 	
 	@Test
